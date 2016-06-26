@@ -27,9 +27,9 @@ $(function(){
     $('#backBtn').click(function(){
         back();
     });
-	$(document).dblclick(function(){
-			window.fullScreenApi.requestFullScreen(document.body);
-	});
+//	$(document).dblclick(function(){
+//			window.fullScreenApi.requestFullScreen(document.body);
+//	});
 	
 	initSlides();
 });
