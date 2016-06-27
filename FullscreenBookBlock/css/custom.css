@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 html { height: 100%; }
 
@@ -126,8 +126,8 @@ a:hover {
 }
 
 .bb-custom-wrapper nav {
-	bottom: 60px;
-	right: 150px;
+	bottom: 110px;
+	right: 260px;
 	position: absolute;
 	z-index: 1000;
 }
@@ -135,18 +135,23 @@ a:hover {
 .bb-custom-wrapper nav span,
 .menu-button {
 	position: absolute;
-	width: 32px;
-	height: 32px;
+	width: 72px;
+	height: 72px;
 	top: 0;
 	left: 0;
 	background: #f1103a;
 	border-radius: 50%;
 	color: #fff;
-	line-height: 30px;
+	line-height: 68px;
 	text-align: center;
 	speak: none;
 	font-weight: bold;
+    font-size: 2.5em;
 	cursor: pointer;
+}
+
+.menu-button {
+    background: green;
 }
 
 .bb-custom-wrapper nav span:hover,
@@ -155,7 +160,7 @@ a:hover {
 }
 
 .bb-custom-wrapper nav span:last-child {
-	left: 80px;
+	left: 120px;
 }
 
 .menu-button {
