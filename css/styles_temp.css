@@ -45,8 +45,7 @@ p {
     box-shadow: inset 100px #000;
     text-align: center;
 	overflow:hidden;
-    -webkit-animation: moveFromLeftFade .7s ease both;
-	animation: moveFromLeftFade .7s ease both;
+    
 }
 
 section {
@@ -58,8 +57,8 @@ section {
 	-moz-box-sizing:border-box; /* Firefox */
 	-webkit-box-sizing:border-box; /* Safari */
 	visibility:hidden;
-    -webkit-animation: moveFromLeftFade .7s ease both;
-	animation: moveFromLeftFade .7s ease both;
+
+	
 /*
     transition: all 1s; 
     -moz-transition: all 1s; 
@@ -71,8 +70,9 @@ section {
     -webkit-transform: rotate3d(1,1,0,60deg);
     -o-transform: rotate3d(1,1,0,60deg);
 */
+
 }
-/*
+
 input[type="radio"] {
     display:none;
 }
@@ -88,7 +88,7 @@ input[type="radio"] + label span {
 input[type="radio"]:checked + label span {
     background:url(../images/check_radio_sheet.png) -19px top no-repeat;
 }
-*/
+
 section.titleSlide {
     padding-left: 40%;
 }
