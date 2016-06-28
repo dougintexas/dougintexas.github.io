@@ -256,6 +256,35 @@ a:hover {
     background-size: 100%;
     
 } 
+#intro .content .scroller {
+    padding-left: 400px;
+    text-align: left !important;
+    
+}
+#intro .content .scroller h2, #intro .content .scroller h3,#intro .content .scroller p {
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+
+#intro .content .scroller h2 {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#intro .content .scroller h3 {
+    margin-bottom: 1em;
+}
+
+#intro .content .scroller p {
+    margin-bottom: 1em;
+    line-height: 1.2em;
+}
+
+
 /*
 #lungs_bkgd {
     position:absolute;
