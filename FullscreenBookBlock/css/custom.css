@@ -126,8 +126,8 @@ a:hover {
 }
 
 .bb-custom-wrapper nav {
-	bottom: 110px;
-	right: 260px;
+	bottom: 50%;
+	left: 18px;
 	position: absolute;
 	z-index: 1000;
 }
@@ -160,7 +160,7 @@ a:hover {
 }
 
 .bb-custom-wrapper nav span:last-child {
-	left: 120px;
+	left: 950px;
 }
 
 .menu-button {

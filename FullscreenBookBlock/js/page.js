@@ -37,7 +37,9 @@ var Page = (function() {
 		},
 		transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
 		supportTransitions = Modernizr.csstransitions;
-
+	$(document).dblclick(function(){
+			window.fullScreenApi.requestFullScreen(document.body);
+	});
 	function init() {
 
 		// initialize jScrollPane on the content div of the first item
