@@ -3,7 +3,7 @@
 	width: 400px;
 	height: 300px;
 	position: relative;
-	background: #fff;
+	background: #614B79;
 	z-index: 100;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .bb-content {
-	background: #fff;
+	background: #614B79;
 }
 
 .bb-inner {
@@ -84,7 +84,7 @@
 
 .bb-overlay, 
 .bb-flipoverlay {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(97, 75, 121, 0.7);
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -95,7 +95,7 @@
 }
 
 .bb-flipoverlay {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(97, 75, 121, 0.2);
 }
 
 .bb-bookblock > div.bb-page:first-child,
@@ -114,5 +114,5 @@
 	top: 0;
 	left: 0;
 	display: none;
-	background: #fff;
+	background: #614B79;
 }
