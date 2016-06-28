@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 html { height: 100%; }
 
@@ -33,6 +33,7 @@ body {
     display: block;
     z-index: 1000;
 }
+
 .js body {
 	overflow: hidden;
 }
@@ -247,6 +248,7 @@ a:hover {
 	background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 */
+
 #intro .content {
     background-image: url("../images/lungs.svg");
     background-repeat: no-repeat;
@@ -254,6 +256,20 @@ a:hover {
     background-size: 100%;
     
 } 
+/*
+#lungs_bkgd {
+    position:absolute;
+    left:0px;
+    top:0px;
+    display: block;
+    border: 1px solid orange;
+    height: 200px;
+    width: 100%;
+    z-index: 0;
+    text-align: left;
+    z-index: 0;
+}
+*/
 .content h2 {
 	font-weight: 700;
 	font-size: 1.8em;
