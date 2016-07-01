@@ -72,7 +72,7 @@ a:hover {
 }
 
 .menu-panel {
-	background: #f1103a;
+	background: #c1261b;
 	width: 240px;
 	height: 100%;
 	position: fixed;
@@ -152,7 +152,6 @@ a:hover {
 	height: 72px;
 	top: 0;
 	left: 0;
-	background: #DA291C;
 	border-radius: 50%;
 	color: #fff;
 	line-height: 68px;
@@ -161,15 +160,17 @@ a:hover {
 	font-weight: bold;
     font-size: 2.5em;
 	cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
 }
 
 .menu-button {
-    background: green;
+    background-color: #48355d;
+    
 }
 
 .bb-custom-wrapper nav span:hover,
 .menu-button:hover {
-	background: #000;
+	background: #50336d;
 }
 
 .bb-custom-wrapper nav span:last-child {
@@ -207,7 +208,7 @@ a:hover {
 .js .content {
 	position: absolute;
 	top: 30px;
-	left: 96px;
+	left: 100px;
 	width: 80%;
 	bottom: 98px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -321,7 +322,15 @@ a:hover {
 	text-align: center;
     color: #fff
 }
-
+.content p.ptQuery {
+    width: 75%;
+    padding:.5em 1em;
+    border-radius: 9px;
+    background-color: #19b16b;
+    margin-top: .7em;
+    margin-right: auto;
+    margin-left: auto;
+}
 @media screen and (max-width: 800px){
 	.no-js .menu-panel {
 		display: none;
