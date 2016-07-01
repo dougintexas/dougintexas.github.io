@@ -7,6 +7,9 @@ var Page = (function() {
     $("#notScreenedQuery").click(function(){
         $("#notScreenedBlank").attr("src", "images/21ppl.svg");
     });
+    $("#radExpQuery").click(function(){
+        $("#radExpBlank").attr("src", "images/rad-chart-withBars.svg");
+    });
 
 	var $container = $( '#container' ),
 		$bookBlock = $( '#bb-bookblock' ),
