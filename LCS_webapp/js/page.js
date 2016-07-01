@@ -1,5 +1,13 @@
 var Page = (function() {
 
+
+    $("#screenedQuery").click(function(){
+        $("#screenedBlank").attr("src", "images/18ppl.svg");
+    });
+    $("#notScreenedQuery").click(function(){
+        $("#notScreenedBlank").attr("src", "images/21ppl.svg");
+    });
+
 	var $container = $( '#container' ),
 		$bookBlock = $( '#bb-bookblock' ),
 		$items = $bookBlock.children(),
