@@ -121,12 +121,12 @@ a:hover {
 
 .menu-panel div a {
 	text-transform: uppercase;
-	font-size: 0.7em;
-	line-height: 1;
+	font-size: 0.8em;
+	line-height: 1.5;
 	padding: 5px 20px;
 	display: block;
 	border: none;
-	color: #bc0b0b;
+	color: #aa0303;
 	letter-spacing: 1px;
 	font-weight: 800;
 	text-shadow: 0 1px rgba(255,255,255,0.2);
@@ -185,7 +185,25 @@ a:hover {
     font-size: 1em;
     line-height: 72px
 }
-
+#returnToAppBtn {
+    z-index: 1000;
+	left: 20px;
+	top: 600px;
+    background-image: url(../images/lungs.svg);
+    background-size: 120px;
+    background-color: rgba(255,255,255,.1) !important;
+    background-repeat: no-repeat;
+    background-position: -25px -20px;
+    position: absolute;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	color: #fff;
+    text-indent: -9000px;
+}
+#returnToAppBtn a {
+    color: white;
+}
 
 /*.menu-button:after {
 	position: absolute;
@@ -311,6 +329,11 @@ a:hover {
 /*	text-shadow: 0 0 2px #000;*/
 }
 
+#staffHead {
+    color: rgba(255,255,255,.3);
+    padding-left: 16px;
+    margin-bottom: 4px;
+}
 .no-js .content h2 {
 	padding: 40px 1% 20px;
 }
