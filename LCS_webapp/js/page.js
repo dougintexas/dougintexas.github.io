@@ -1,44 +1,57 @@
-var Page = (function() {
-
-
-    $("#screenedQuery").click(function(){
-        $("#screenedBlank").attr("src", "images/18ppl.svg");
+var Page = (function () {
+    $origImage = '';
+    $repImage = '';
+    $targetImage = '';
+    $(".ptQuery").click(function(){
+        $repImage = this.getAttribute('data-repImg');
+        $origImage = this.getAttribute('data-origImg');
+        $targetImage = this.getAttribute('data-target');
+        replaceImg("replace");
     });
-    $("#notScreenedQuery").click(function(){
-        $("#notScreenedBlank").attr("src", "images/21ppl.svg");
-    });
-    $("#radExpQuery").click(function(){
-        $("#radExpBlank").attr("src", "images/rad-chart-withBars.svg");
-    });
+//    
+    function replaceImg(cmd) {
+        if (cmd == "replace") {
+            $("#" + $targetImage).attr("src", "images/" + $repImage);
+        } else {
+            $("#" + $targetImage).attr("src", "images/" + $origImage);
+        };
+    }
+//        var btnClickedName = imgID;
+//        alert("you want to replace the image " + btnClickedName);  
+//    };
+//    $("#notScreenedQuery").click(function(){
+//        $("#notScreenedBlank").attr("src", "images/21ppl.svg");
+//    });
+//    $("#radExpQuery").click(function(){
+//        $("#radExpBlank").attr("src", "images/rad-chart-withBars.svg");
+//    });
 
-	var $container = $( '#container' ),
-		$bookBlock = $( '#bb-bookblock' ),
+	var $container = $('#container'),
+		$bookBlock = $('#bb-bookblock'),
 		$items = $bookBlock.children(),
 		itemsCount = $items.length,
 		current = 0,
-		bb = $( '#bb-bookblock' ).bookblock( {
+		bb = $('#bb-bookblock').bookblock({
 			speed : 800,
 			perspective : 2000,
 			shadowSides	: 0.8,
 			shadowFlip	: 0.4,
-			onEndFlip : function(old, page, isLimit) {
-				
+			onEndFlip : function (old, page, isLimit) {
 				current = page;
 				// update TOC current
 				updateTOC();
 				// updateNavigation
-				updateNavigation( isLimit );
+				updateNavigation(isLimit);
 				// initialize jScrollPane on the content div for the new item
-				setJSP( 'init' );
+				setJSP('init');
 				// destroy jScrollPane on the content div for the old item
-				setJSP( 'destroy', old );
-
+				setJSP('destroy', old);
 			}
-		} ),
-		$navNext = $( '#bb-nav-next' ),
-		$navPrev = $( '#bb-nav-prev' ).hide(),
-		$menuItems = $container.find( 'ul.menu-toc > li' ),
-		$tblcontents = $( '#tblcontents' ),
+		}),
+		$navNext = $('#bb-nav-next'),
+		$navPrev = $('#bb-nav-prev').hide(),
+		$menuItems = $container.find('ul.menu-toc > li'),
+		$tblcontents = $('#tblcontents'),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -48,13 +61,13 @@ var Page = (function() {
 		},
 		transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
 		supportTransitions = Modernizr.csstransitions;
-	$(document).dblclick(function(){
-			window.fullScreenApi.requestFullScreen(document.body);
+	$(document).dblclick(function () {
+        window.fullScreenApi.requestFullScreen(document.body);
 	});
 	function init() {
 
 		// initialize jScrollPane on the content div of the first item
-		setJSP( 'init' );
+		setJSP('init');
 		initEvents();
 
 	}
@@ -62,93 +75,91 @@ var Page = (function() {
 	function initEvents() {
 
 		// add navigation events
-		$navNext.on( 'click', function() {
+		$navNext.on('click', function () {
+            replaceImg("reset");
 			bb.next();
 			return false;
-		} );
+		});
 
-		$navPrev.on( 'click', function() {
+		$navPrev.on('click', function () {
+            replaceImg("reset");
 			bb.prev();
 			return false;
-		} );
+		});
 		
 		// add swipe events
-		$items.on( {
-			'swipeleft'		: function( event ) {
-				if( $container.data( 'opened' ) ) {
+		$items.on({
+			'swipeleft'		: function (event) {
+				if ($container.data('opened')) {
 					return false;
 				}
 				bb.next();
 				return false;
 			},
-			'swiperight'	: function( event ) {
-				if( $container.data( 'opened' ) ) {
+			'swiperight'	: function (event) {
+				if ($container.data('opened')) {
 					return false;
 				}
 				bb.prev();
 				return false;
 			}
-		} );
+		});
 
 		// show table of contents
-		$tblcontents.on( 'click', toggleTOC );
+		$tblcontents.on('click', toggleTOC);
 
 		// click a menu item
-		$menuItems.on( 'click', function() {
+		$menuItems.on('click', function () {
 
-			var $el = $( this ),
+			var $el = $(this),
 				idx = $el.index(),
-				jump = function() {
-					bb.jump( idx + 1 );
+				jump = function () {
+					bb.jump(idx + 1);
 				};
 			
-			current !== idx ? closeTOC( jump ) : closeTOC();
+			current !== idx ? closeTOC(jump) : closeTOC();
 
 			return false;
 			
-		} );
+		});
 
 		// reinit jScrollPane on window resize
-		$( window ).on( 'debouncedresize', function() {
+		$(window).on('debouncedresize', function () {
 			// reinitialise jScrollPane on the content div
-			setJSP( 'reinit' );
-		} );
+			setJSP('reinit');
+		});
 
 	}
 
-	function setJSP( action, idx ) {
+	function setJSP(action, idx) {
 		
 		var idx = idx === undefined ? current : idx,
-			$content = $items.eq( idx ).children( 'div.content' ),
-			apiJSP = $content.data( 'jsp' );
+			$content = $items.eq(idx).children('div.content'),
+			apiJSP = $content.data('jsp');
 		
-		if( action === 'init' && apiJSP === undefined ) {
+		if (action === 'init' && apiJSP === undefined) {
 			$content.jScrollPane({verticalGutter : 0, hideFocus : true });
-		}
-		else if( action === 'reinit' && apiJSP !== undefined ) {
+		} else if (action === 'reinit' && apiJSP !== undefined) {
 			apiJSP.reinitialise();
-		}
-		else if( action === 'destroy' && apiJSP !== undefined ) {
+		} else if (action === 'destroy' && apiJSP !== undefined) {
 			apiJSP.destroy();
 		}
 
 	}
 
 	function updateTOC() {
-		$menuItems.removeClass( 'menu-toc-current' ).eq( current ).addClass( 'menu-toc-current' );
+		$menuItems.removeClass('menu-toc-current').eq(current).addClass('menu-toc-current');
 	}
 
-	function updateNavigation( isLastPage ) {
+	function updateNavigation(isLastPage) {
 		
-		if( current === 0 ) {
+		if (current === 0) {
 			$navNext.show();
 			$navPrev.hide();
-		}
-		else if( isLastPage ) {
+		} else if (isLastPage) {
 			$navNext.hide();
 			$navPrev.show();
-		}
-		else {
+		} else {
 			$navNext.show();
 			$navPrev.show();
 		}
@@ -156,24 +167,24 @@ var Page = (function() {
 	}
 
 	function toggleTOC() {
-		var opened = $container.data( 'opened' );
+		var opened = $container.data('opened');
 		opened ? closeTOC() : openTOC();
 	}
 
 	function openTOC() {
 		$navNext.hide();
 		$navPrev.hide();
-		$container.addClass( 'slideRight' ).data( 'opened', true );
+		$container.addClass('slideRight').data('opened', true);
 	}
 
-	function closeTOC( callback ) {
+	function closeTOC(callback) {
 
-		updateNavigation( current === itemsCount - 1 );
-		$container.removeClass( 'slideRight' ).data( 'opened', false );
-		if( callback ) {
+		updateNavigation(current === itemsCount - 1);
+		$container.removeClass('slideRight').data('opened', false);
+		if(callback) {
 			if( supportTransitions ) {
-				$container.on( transEndEventName, function() {
-					$( this ).off( transEndEventName );
+				$container.on(transEndEventName, function() {
+					$(this).off(transEndEventName);
 					callback.call();
 				} );
 			}

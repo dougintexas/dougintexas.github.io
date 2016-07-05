@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/textandformslides.css" />
 		<script src="js/modernizr.custom.79639.js"></script>
 	</head>
 	<body>
@@ -21,21 +22,22 @@
 				<ul id="menu-toc" class="menu-toc">
 					<li class="menu-toc-current"><a href="#intro">Welcome</a></li>
 					<li><a href="#whatIsLCS">What is Lung Cancer Screening?</a></li>
-                    <li><a href="#BenefitsLCS">Benefits of Lung Cancer Screening?</a></li>
+                    <li><a href="#benefitsLCS">Benefits of Lung Cancer Screening?</a></li>
 					<li><a href="#screened">People Who Are Screened</a></li>
 					<li><a href="#notScreened">People Who Are Not Screened</a></li>
 					<li><a href="#screenedVunscreened">Screened versus Without Screening</a></li>
-                    <li><a href="#risk">Risks</a></li>
-                    <li><a href="#exposure">Exposure</a></li>
-                    <li><a href="#riskOverDx">Overdiagnosis</a></li>
+                    <li><a href="#benefits2">Other Benefits</a></li>
+                    <li><a href="#risksPossible">Risks</a></li>
+                    <li><a href="#risksExposure">Exposure</a></li>
+                    <li><a href="#riskOverdx">Overdiagnosis</a></li>
                     <li><a href="#otherConsids">Other Considerations</a></li>
-                    <li><a href="#howImportant">Follow-up Questions</a></li>
+                    <li><a href="#followUp">Follow-up Questions</a></li>
 				</ul>
 				<div>
                       <p id="staffHead">Staff Only Below</p>
-					<a href="http://redcap.mdanderson.org/surveys/?s=ETY4NNRH3M">Pre-intervention Survey</a>
-					<a href="http://redcap.mdanderson.org/surveys/?s=343Y4RFEHT">Post-intervetion Survey</a>
+                    <a href="http://redcap.mdanderson.org/surveys/?s=ETY4NNRH3M">Pre-intervention</a>
                     <a href="decCoaching.html">Decision Coaching</a>
+                    <a href="http://redcap.mdanderson.org/surveys/?s=343Y4RFEHT">Post-intervetion</a>
 				</div>
 			</div>
 
@@ -68,7 +70,7 @@
 						</div>
 					</div>
                     
-                    <div class="bb-item" id="BenefitsLCS">
+                    <div class="bb-item" id="benefitsLCS">
 						<div class="content">
 							<div class="scroller">
 								<h2>Benefits of Lung Cancer Screening</h2>
@@ -76,9 +78,9 @@
 
 <!--                                    <br>Of these people, 18 who are screened would die of lung cancer.-->
                                 </p>
-                                <img style="clear:left;" src="images/1000ppl-01.svg" width="730" id="BenefitsLCSBlank">
+                                <img style="clear:left;" src="images/1000ppl-01.svg" width="730"  id="BenefitsLCSImg">
                                 
-                                <P class="ptQuery" id="BenefitsLCSQuery">Show me what happens to this population...(tap to view)</P>
+                                <P class="ptQuery" id="BenefitsLCSQuery" data-repImg="18ppl.svg" data-origImg ="1000ppl-01.svg" data-target="BenefitsLCSImg">Show me what happens to this population...(tap to view)</P>
 							</div>
 						</div>
 					</div>
@@ -88,11 +90,11 @@
 							<div class="scroller">
 								<h2>People who ARE screened</h2>
                                 <p>This figure represents 1000 people who ARE screened for lung cancer.
-<!--                                    <br>Of these people, 18 who are screened would die of lung cancer.-->
+
                                 </p>
                                 <img style="clear:left;" src="images/1000ppl-01.svg" width="730" id="screenedBlank">
                                 
-                                <P class="ptQuery" id="screenedQuery">How many of the 1000 people screened for lung cancer will die from lung cancer? (tap to view)</P>
+                                <P class="ptQuery" id="screenedQuery" data-repImg="18ppl.svg" data-origImg ="1000ppl-01.svg" data-target="screenedBlank">How many of the 1000 people screened for lung cancer will die from lung cancer? (tap to view)</P>
 							</div>
 						</div>
 					</div>
@@ -105,7 +107,7 @@
                                 </p>
                                 <img style="clear:left;" src="images/1000ppl-01.svg" width="730" id="notScreenedBlank">
                                 
-                                <P class="ptQuery" id="notScreenedQuery">How many of the 1000 people NOT screened for lung cancer will die from lung cancer? (tap to view)</P>
+                                <P class="ptQuery" id="notScreenedQuery" data-repImg="21ppl.svg" data-origImg ="1000ppl-01.svg" data-target="notScreenedBlank">How many of the 1000 people NOT screened for lung cancer will die from lung cancer? (tap to view)</P>
 							</div>
 						</div>
 					</div>
@@ -114,29 +116,29 @@
 							<div class="scroller">
                                 <h2>Screened versus Without Screening</h2>
                                 <p>With LDCT screening, 3 fewer people will die from lung cancer.</p>
-                                <img style="clear:left;" src="images/3ppl.svg" width="730" id="screenedVunscreenedBlank">
-                                <P class="ptQuery" id="screenedVunscreenedQuery">How many of the 1000 people NOT screened for lung cancer will die from lung cancer? (tap to view)</P>
+                                <img style="clear:left;" src="images/1000ppl-01.svg" width="730" id="screenedVunscreenedBlank">
+                                <P class="ptQuery" id="screenedVunscreenedQuery" data-repImg="3ppl.svg" data-origImg ="1000ppl-01.svg" data-target="screenedVunscreenedBlank">How many of the 1000 people NOT screened for lung cancer will die from lung cancer? (tap to view)</P>
                                 
 							</div>
 						</div>
 					</div>
 
-                    <div class="bb-item" id="Benefits2">
+                    <div class="bb-item" id="benefits2">
 						<div class="content">
 							<div class="scroller">
                                 <h2>Greater Chance of NOT Dying from any cause<br>(not just lung cancer)</h2>
-                                <p>Over a 6 to 7 year period:</p>
-                                <ul>
-                                    <li>70 out of 1,000 people who ARE screened for lung cancer will die from any cause.</li>
-                                    <li>75 out of 1,000 people who are NOT screened for lung cancer will die from any cause.</li>
-                                </ul>
-                                <p>With LDCT screening, 5 fewer people will die from any cause.</p>
+                                <div class="highlighted-content">
+                                    <h3>Over a 6 to 7 year period:</h3>
+                                    <p>70 out of 1,000 people who ARE screened for lung cancer<br>will die from any cause.</p>
+                                    <p>75 out of 1,000 people who are NOT screened for lung cancer<br>will die from any cause.</p>
+                                    <p class="emphasized">With LDCT screening, 5 fewer people<br>will die from any cause.</p>
+                                </div>
                                 
 							</div>
 						</div>
 					</div>
                     
-                    <div class="bb-item" id="risks">
+                    <div class="bb-item" id="possibleRisks">
 						<div class="content">
 							<div class="scroller">
 								<h2>Possible Risks</h2>
@@ -146,13 +148,13 @@
 						</div>
 					</div>
 
-                    <div class="bb-item" id="exposure">
+                    <div class="bb-item" id="risksExposure">
 						<div class="content">
 							<div class="scroller">
 								<h2>Risk: Exposure to Radiation</h2>
                                 <p style="font-size: 1.1em">LDCT scans expose a person to radiation, which can increase his or her risk of developing cancer. We do not know how radiation from LDCT scan may affect a person's health.</p>
                                 <img src="images/rad-chart-noBars.svg" style="width:95%;margin-top: 0%;margin-left:15px" id="radExpBlank">
-                                <P class="ptQuery" id="radExpQuery">Radiation exposure (tap to view)</P>
+                                <P class="ptQuery" id="radExpQuery"  data-repImg="rad-chart-withBars.svg" data-origImg ="rad-chart-noBars.svg" data-target="radExpBlank">Radiation exposure (tap to view)</P>
                                 
 							</div>
 						</div>
@@ -162,11 +164,10 @@
 						<div class="content">
 							<div class="scroller">
 								<h2>Risk: Overdiagnosis</h2>
-                                <ul>
-                                    <li>Lung cancer screening may find lung cancer that would not have ever caused symptoms or harmed you in your lifetime. This is called over-diagnosis.</li>
-                                    <li>Over-diagnosis means that some people may get treatment that they do not need.</li>
-                                
-                                </ul>
+                                <div class="highlighted-content">
+                                <p class="emphasized">Lung cancer screening may find lung cancer that would not have ever caused symptoms or harmed you in your lifetime. This is called over-diagnosis.</p>
+                                <p class="emphasized">Over-diagnosis means that some people may get treatment that they do not need.</p>
+                                </div>
 
 							</div>
 						</div>
@@ -176,30 +177,140 @@
 						<div class="content">
 							<div class="scroller">
 								<h2>Something else to consider about lung cancer screening</h2>
-                                
-                                <ul>
-                                    <li>Lung cancer screening may find other health issues that are not cancer.</li>
-                                    <li>Screening can find health problems like heart disease, kidney problems, and thickened lung tissue.</li>
-                                </ul>
+                                <div class="highlighted-content">
+                                <p class="emphasized">Lung cancer screening may find other health<br>issues that are not cancer.</p>
+                                <p class="emphasized">Screening can find health problems like heart disease, kidney problems, and thickened lung tissue.</p>
+                                </div>
 
 							</div>
 						</div>
 					</div>
                     
+                   
+                    <div class="bb-item" id="followUp">
+						<div class="content">
+							<div class="scroller">
+                                <div class="formContent">
+								<h2>Your Concerns</h2>
+                                    
+
+                                    <table class="ptResponses">
+                                        <tr class="tableHead">
+                                            <th></th>
+                                            <th class="colHead">Very Concerned</th>
+                                            <th class="colHead">Somewhat Concerned</th>
+                                            <th class="colHead">Not Concerned</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4"></th>
+                                        </tr>
+                                        <tr>
+                                            <th class="boldHead">How important is it to you to find lung cancer early when it may be treated more easily treated?</th>
+                                            <td><input type="radio" name="findLungCancer" value="very" class="css-checkbox"></td>
+                                            <td><input type="radio" name="findLungCancer" value="somewhat" class="css-checkbox"></td>
+                                            <td><input type="radio" name="findLungCancer" value="notImp" class="css-checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" class="boldHead" style="padding-top: 1em;">How concerned are you about...</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">having a false alarm?</th>
+                                            <td><input type="radio" name="falseAlarm" value="very"></td>
+                                            <td><input type="radio" name="falseAlarm" value="somewhat"></td>
+                                            <td><input type="radio" name="falseAlarm" value="notImp"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">being exposed to radiation from lung cancer?</th>
+                                            <td><input type="radio" name="radExposure" value="very"></td>
+                                            <td><input type="radio" name="radExposure" value="somewhat"></td>
+                                            <td><input type="radio" name="radExposure" value="notImp"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">being treated for lung cancer that never would have harmed you?</th>
+                                            <td><input type="radio" name="treatedNoHarm" value="very"></td>
+                                            <td><input type="radio" name="treatedNoHarm" value="somewhat"></td>
+                                            <td><input type="radio" name="treatedNoHarm" value="notImp"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">having surgery if lung cancer is found?</th>
+                                            <td><input type="radio" name="surgery" value="very"></td>
+                                            <td><input type="radio" name="surgery" value="somewhat"></td>
+                                            <td><input type="radio" name="surgery" value="notImp"></td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                                
+							</div>
+						</div>
+					</div>
+                     
+                    <div class="bb-item" id="talkAbout">
+						<div class="content">
+							<div class="scroller">
+								<h2>Talking About Lung Cancer Screening</h2>
+                                
+                                    <table class="ptResponses">
+                                        <tr>
+                                            <th class="boldHead" style="padding-top: 1em;">Things you might want to talk about...</th>
+                                            <th class="colHead">Yes, I want to talk about this</th>
+                                            <th class="colHead">No, I don't want to talk about this</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">what happens if I decide NOT to be screened for lung cancer.</th>
+                                            <td><input type="radio" name="falseAlarm" value="very"></td>
+                                            <td><input type="radio" name="falseAlarm" value="somewhat"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">how soon I will know the results of screening.</th>
+                                            <td><input type="radio" name="radExposure" value="very"></td>
+                                            <td><input type="radio" name="radExposure" value="somewhat"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">what happens if the lung cancer screening shows something that may need more testing.</th>
+                                            <td><input type="radio" name="treatedNoHarm" value="very"></td>
+                                            <td><input type="radio" name="treatedNoHarm" value="somewhat"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="queryDetail">having surgery if lung cancer is found?</th>
+                                            <td><input type="radio" name="surgery" value="very"></td>
+                                            <td><input type="radio" name="surgery" value="somewhat"></td>
+                                        </tr>
+                                    </table>
+                                
+							</div>
+						</div>
+					</div>                    
+
                     
-                                      
+                    <div class="bb-item" id="keyMessages">
+						<div class="content">
+							<div class="scroller">
+								<h2>Before you talk to your provider, please confirm the comments below:</h2>
+                                
+                                
+                                <p class="confirmed"><input type="checkbox" name="quitSmoking" value="true">&nbsp;&nbsp;The best thing to lower your risk of dying from lung cancer is to quit smoking or continue to not smoke.</p>
+                                
+                                <p class="confirmed"><input type="checkbox" name="annualScreening" value="true">&nbsp;&nbsp;I shoud return once a year for annual screening.</p>
+                                
+							</div>
+						</div>
+					</div>                    
                     
+                     
                    
                     
                     <div class="bb-item" id="closing">
 						<div class="content">
 							<div class="scroller">
 								<h2>Thank You!</h2>
-                                <p>Thank you for reviewing this information. Please hold on to this iPad and a staff person will assist you shortly.</p>
+                                 
+                                <p class="emphasized">Thank you for reviewing this information. Please hold on to this iPad and a staff person will assist you shortly.</p>
+                                
 							</div>
 						</div>
 					</div>
-                   
+                   </form>
  
                 
 				</div>

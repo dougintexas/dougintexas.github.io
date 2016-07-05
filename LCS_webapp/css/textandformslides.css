@@ -1,0 +1,96 @@
+
+
+.scroller h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.highlighted-content {
+    width: 100%;
+    border:3px solid #fff;
+    padding: 12px 24px;
+    background-color: #7ca7cc;
+    margin-top: 36px;
+    border-radius: 12px;
+    padding-top: 24px !important;
+}
+
+.highlighted-content p {
+    margin-top: 1em;
+}
+.highlighted-content h3 {
+    font-size: 2em
+}
+
+table.ptResponses {
+    background-color: #005184;
+    margin-top: 36px;
+    border-radius: 12px;
+    padding:24px;
+    background-color: #7ca7cc;
+}
+
+table.ptResponses th {
+    text-align: left;
+    font-size: 1.3em;
+    background-color: #6a7fa2;
+    padding: 6px;
+    color: #fff;
+    font-weight: normal;
+}
+table.ptResponses th.boldHead {
+    font-weight: bold;
+}
+table.ptResponses th.colHead {
+    color: rgba(255,255,255,.8);
+    font-size: 1em;
+    font-weight: bold;
+}
+table.ptResponses th.queryDetail {
+    padding-left:1.5em;
+}
+
+th.queryDetail {
+    margin-left: 36px;
+}
+table.ptResponses td {
+    text-align: center;
+}
+
+th.colHead {
+    text-align: center !important;
+    padding: 0px 12px;
+}
+
+.emphasized {
+    background-color: rgba(255,255,255,.3);
+    border-radius: 12px;
+    padding:24px;
+    font-size: 1.6em !important;
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    margin-bottom: 18px !important;
+    
+}
+p.confirmed {
+    text-align: left !important;
+    background-color: rgba(255,255,255,.3) !important;
+    border-radius: 12px;
+    padding:24px;
+    font-size: 1.6em !important;
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    padding-left: 3em;
+    margin-bottom: 18px !important;
+    text-indent: -24px;
+}
+table, th, td {
+    border:1px solid white;
+    border-collapse: collapse;
+}
+table.ptResponses tr.tableHead th {
+   
+}
+.ptResponses th.colHead {
+    color: ;
+}
