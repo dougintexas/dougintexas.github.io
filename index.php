@@ -1,1 +1,1 @@
-<?php header( 'Location: /LCS_activity.html' ) ;  ?>
+<?php header( 'Location: /LCS_webapp/index.html' ) ;  ?>
