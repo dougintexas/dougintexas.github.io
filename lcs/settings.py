@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
+TIME_ZONE = 'US/Central'
+USE_I18N = False
+USE_L10N = False
 USE_TZ = True
 
 # Update database configuration with $DATABASE_URL.
