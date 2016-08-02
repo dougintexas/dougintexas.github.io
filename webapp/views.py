@@ -7,6 +7,7 @@ def index(request):
     if request.method == 'POST':
         submission = SurveyForm(request.POST)
         submission.save()
+        return render(request, 'thanks.html')
     SurveyFormSet = SurveyForm
     formset = SurveyForm
-    return render(request, 'base.html', {'formset': formset})
+    return render(request, 'main.html', {'formset': formset})

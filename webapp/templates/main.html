@@ -1,4 +1,5 @@
-{% extends "base_generic.html" %}
+{% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
@@ -22,10 +23,10 @@
 						<p>Lung cancer screening is used to find lung cancer before it has spread.</p>
 						<p>Low-dose computer tomography (LDCT) is used for the lung cancer screening. The scan uses low amounts of radiation to get images of your lungs. It is not painful.</p>
 						<!--
-                                            <video id="LDCTVideo" width="780" controls>
-                                                    <source src="VolkCTScan.mp4" type="video/mp4">
-                                                    <source src="VolkCTScan_1.mov" type="video/mov">
-                                            </video>
+							<video id="LDCTVideo" width="780" controls>
+											<source src="VolkCTScan.mp4" type="video/mp4">
+											<source src="VolkCTScan_1.mov" type="video/mov">
+							</video>
             -->
 					</div>
 				</div>
@@ -248,13 +249,15 @@
 			</div>
 		</div>
 
-		<div id="mdanderson_logo">
-			logo to come
-		</div>
+	<div id="mdanderson_logo">
+		logo to come
+	</div>
 
-		<nav>
-			<span id="bb-nav-prev">&larr;</span>
-			<span id="bb-nav-next">&rarr;</span>
-		</nav>
+	<nav>
+		<span id="bb-nav-prev">&larr;</span>
+		<span id="bb-nav-next">&rarr;</span>
+	</nav>
 
-	{% endblock %}
+	</div>
+
+{% endblock %}
