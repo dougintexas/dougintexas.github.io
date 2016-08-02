@@ -116,7 +116,7 @@
 			// set the perspective
 			this.$el.css('perspective', this.options.perspective);
 			// items
-			this.$items = this.$el.children('.bb-item');
+			this.$items = this.$el.find('.bb-item');
 			// total items
 			this.itemsCount = this.$items.length;
 			// current item's index
@@ -307,7 +307,7 @@
 
 				if (event.target.className === 'bb-page') {
 
-					self.$el.children('div.bb-page').remove();
+					self.$el.find('div.bb-page').remove();
 					self.$nextItem.show();
 
 					self.end = false;
@@ -527,7 +527,7 @@
 		update : function () {
 
 			var $currentItem = this.$items.eq( this.current );
-			this.$items = this.$el.children('.bb-item');
+			this.$items = this.$el.find('.bb-item');
 			this.itemsCount = this.$items.length;
 			this.current = $currentItem.index();
 

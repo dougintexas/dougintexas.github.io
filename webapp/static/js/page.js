@@ -11,9 +11,9 @@ var Page = (function () {
 //    
     function replaceImg(cmd) {
         if (cmd == "replace") {
-            $("#" + $targetImage).attr("src", "images/" + $repImage);
+            $("#" + $targetImage).attr("src", "static/images/" + $repImage);
         } else {
-            $("#" + $targetImage).attr("src", "images/" + $origImage);
+            $("#" + $targetImage).attr("src", "static/images/" + $origImage);
         };
     }
 //        var btnClickedName = imgID;
@@ -28,7 +28,7 @@ var Page = (function () {
 
 	var $container = $('#container'),
 		$bookBlock = $('#bb-bookblock'),
-		$items = $bookBlock.children(),
+		$items = $bookBlock.find('.bb-item'),
 		itemsCount = $items.length,
 		current = 0,
 		bb = $('#bb-bookblock').bookblock({
