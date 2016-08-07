@@ -138,8 +138,10 @@
 					</div>
 				</div>
 			</div>
-			<form action="" method="post">
+			<form action="/thanks" method="post">
 				{% csrf_token %}
+				{{ formset.survey_code }}
+
 				<div class="bb-item" id="followUp">
 					<div class="content">
 						<div class="scroller">

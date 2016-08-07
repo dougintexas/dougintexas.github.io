@@ -37,7 +37,10 @@
 		<div>
 			<p id="staffHead">Staff Only Below</p>
 			<a href="http://redcap.mdanderson.org/surveys/?s=ETY4NNRH3M">Pre-intervention</a>
-			<a href="decCoaching.html">Decision Coaching</a>
+			<a href="/start">Start Decision Aid</a>
+			{% if request.session.survey_code %}
+				<a href="/coaching/{{ request.session.survey_code }}">Decision Coaching</a>
+			{% endif %}
 			<a href="http://redcap.mdanderson.org/surveys/?s=343Y4RFEHT">Post-intervetion</a>
 		</div>
 	</div>

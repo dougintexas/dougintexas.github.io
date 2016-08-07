@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django import forms
-from django.forms import ModelForm, RadioSelect
+from django.forms import ModelForm, HiddenInput
 
 CHOICES_CONCERNED = (
     ('Very Concerned', 'Very Concerned'),
@@ -21,6 +21,11 @@ CHOICES_CONFIRM = (
 
 
 class Survey(models.Model):
+    survey_code = models.CharField(
+        blank=True,
+        null=True,
+        max_length=30,
+    )
     date_submitted = models.DateTimeField(auto_now_add=True)
     q_concerned_find_cancer = models.CharField(
         blank=True,
@@ -101,6 +106,7 @@ class SurveyForm(ModelForm):
     class Meta:
         model = Survey
         fields = [
+            'survey_code',
             'q_concerned_find_cancer',
             'q_concerned_false_alarm',
             'q_concerned_radiation',
@@ -113,8 +119,6 @@ class SurveyForm(ModelForm):
             'q_confirm_quit_smoking',
             'q_confirm_annual_screening',
         ]
-        # widgets = {'q_imporant_find_cancer': RadioSelect, 'q_concerned_false_alarm': RadioSelect}
-
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
-    test = forms.RadioSelect()
+        widgets = {
+            'survey_code': HiddenInput(),
+        }
