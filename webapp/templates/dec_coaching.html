@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div class="bb-custom-wrapper">
+		<div id="bb-bookblock" class="bb-bookblock">
+			<div class="bb-item" id="decIntro">
+				<div class="content">
+					<div class="scroller">
+						<h2>Decision Coaching</h2>
+						<p>The following screens depict the patient's responses to questions asked in the course of completing the Lung Cancer Screening Decision Aid. You are encouraged to discuss these </p>
+					</div>
+				</div>
+			</div>
+			<div class="bb-item" id="followUp">
+				<div class="content">
+					<div class="scroller">
+						<div class="formContent">
+							<h2>Your Concerns</h2>
+							<table class="ptResponses">
+								<tr>
+									<th class="boldHead">How important is it to you to find lung cancer early when it may be treated more easily treated?</th>
+									<td>{{ survey.q_concerned_find_cancer }}</td>
+								</tr>
+								<tr>
+									<th colspan="2" class="boldHead" style="padding-top: 1em;">How concerned are you about...</th>
+								</tr>
+								<tr>
+									<th class="queryDetail">having a false alarm?</th>
+									<td>{{ survey.q_concerned_false_alarm }}</td>
+								</tr>
+								<tr>
+									<th class="queryDetail">being exposed to radiation from lung cancer?</th>
+									<td>{{ survey.q_concerned_radiation }}</td>
+								</tr>
+								<tr>
+									<th class="queryDetail">being treated for lung cancer that never would have harmed you?</th>
+									<td>{{ survey.q_concerned_unnecessary_treatment }}</td>
+								</tr>
+								<tr>
+									<th class="queryDetail">having surgery if lung cancer is found?</th>
+									<td>{{ survey.q_concerned_surgery }}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bb-item" id="talkAbout">
+				<div class="content">
+					<div class="scroller">
+						<h2>Talking About Lung Cancer Screening</h2>
+						<table class="ptResponses">
+							<tr>
+								<th class="boldHead" style="padding-top: 1em;" colspan="2">Things you might want to talk about...</th>
+							</tr>
+							<tr>
+								<th class="queryDetail">what happens if I decide NOT to be screened for lung cancer.</th>
+								<td>{{ survey.q_talk_not_screened }}</td>
+							</tr>
+							<tr>
+								<th class="queryDetail">how soon I will know the results of screening.</th>
+								<td>{{ survey.q_talk_how_soon }}</td>
+							</tr>
+							<tr>
+								<th class="queryDetail">what happens if the lung cancer screening shows something that may need more testing.</th>
+								<td>{{ survey.q_talk_more_screening }}</td>
+							</tr>
+							<tr>
+								<th class="queryDetail">having surgery if lung cancer is found?</th>
+								<td>{{ survey.q_talk_having_surgery }}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<span id="bb-nav-prev">&larr;</span>
+				<span id="bb-nav-next">&rarr;</span>
+			</nav>
+		</div>
+	</div>
+{% endblock %}
