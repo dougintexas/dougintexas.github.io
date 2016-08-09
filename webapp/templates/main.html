@@ -21,7 +21,9 @@
 					<div class="scroller">
 						<h2>What is Lung Cancer Screening</h2>
 						<p>Lung cancer screening is used to find lung cancer before it has spread.</p>
-						<p>Low-dose computer tomography (LDCT) is used for the lung cancer screening. The scan uses low amounts of radiation to get images of your lungs. It is not painful.</p>
+						<p>Low-dose computed tomography (LDCT) is used for the lung cancer screening. The scan uses low amounts of radiation to get images of your lungs. It is not painful.</p>
+                        <p>You could have lung cancer even if you do not have symptoms.</p>
+                        <p>LDCT will be used to refer to this scan for lung cancer screening in this decision aid.</p>
 						<!--
 							<video id="LDCTVideo" width="780" controls>
 											<source src="VolkCTScan.mp4" type="video/mp4">
@@ -32,26 +34,25 @@
 				</div>
 			</div>
 
-			<div class="bb-item" id="benefitsLCS">
+			<!--<div class="bb-item" id="benefitsLCS">
 				<div class="content">
 					<div class="scroller">
 						<h2>Benefits of Lung Cancer Screening</h2>
 						<p>To see the benefits of lung cancer screening, let’s look at 1,000 people who are at high risk for lung cancer.
 
-							<!--                                    <br>Of these people, 18 who are screened would die of lung cancer.-->
 						</p>
 						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730"  id="BenefitsLCSImg">
 
 						<p class="ptQuery" id="BenefitsLCSQuery" data-repImg="18ppl.svg" data-origImg ="1000ppl-01.svg" data-target="BenefitsLCSImg">Show me what happens to this population...(tap to view)</p>
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 			<div class="bb-item" id="screened">
 				<div class="content">
 					<div class="scroller">
 						<h2>People who ARE screened</h2>
-						<p>This figure represents 1000 people who ARE screened for lung cancer.</p>
+						<p>To see the benefits of lung cancer screening, let’s look at 1,000 people who are at high risk for lung cancer and who are screened once a year for 3 years and followed for an average of 6.5 years. </p>
 						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="screenedBlank">
 						<p class="ptQuery" id="screenedQuery" data-repImg="18ppl.svg" data-origImg ="1000ppl-01.svg" data-target="screenedBlank">How many of the 1000 people screened for lung cancer will die from lung cancer? (tap to view)</p>
 					</div>
@@ -61,7 +62,8 @@
 				<div class="content">
 					<div class="scroller">
 						<h2>People who ARE NOT screened.</h2>
-						<p>This figure represents 1000 people who ARE NOT screened for lung cancer.
+						<p>Now let’s look at 1,000 people who are at high risk for lung cancer who ARE NOT screened for lung cancer. 
+
 							{#									<br>Research shows that 21 out of the 1000 people who not screen would die of lung cancer.#}
 						</p>
 						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="notScreenedBlank">
@@ -72,7 +74,7 @@
 			<div class="bb-item" id="screenedVunscreened">
 				<div class="content">
 					<div class="scroller">
-						<h2>Screened versus Without Screening</h2>
+						<h2>Benefit: Lower chance of dying from lung cancer.</h2>
 						<p>With LDCT screening, 3 fewer people will die from lung cancer.</p>
 						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="screenedVunscreenedBlank">
 						<p class="ptQuery" id="screenedVunscreenedQuery" data-repImg="3ppl.svg" data-origImg ="1000ppl-01.svg" data-target="screenedVunscreenedBlank">How many of the 1000 people NOT screened for lung cancer will die from lung cancer? (tap to view)</p>
@@ -83,7 +85,7 @@
 			<div class="bb-item" id="benefits2">
 				<div class="content">
 					<div class="scroller">
-						<h2>Greater Chance of NOT Dying from any cause<br>(not just lung cancer)</h2>
+						<h2>Benefit: Lower chance of dying from any cause.</h2>
 						<div class="highlighted-content">
 							<h3>Over a 6 to 7 year period:</h3>
 							<p>70 out of 1,000 people who ARE screened for lung cancer<br>will die from any cause.</p>
@@ -97,17 +99,47 @@
 			<div class="bb-item" id="possibleRisks">
 				<div class="content">
 					<div class="scroller">
-						<h2>Possible Risks</h2>
-						<p>False-positives, invasive procedures, complication</p>
+						<h2>Possible Harms</h2>
+						<p>False-alarms, invasive procedures, complication</p>
 						<p>Numbers to come.</p>
 					</div>
 				</div>
 			</div>
+            
+            <div class="bb-item" id="falseAlarms">
+				<div class="content">
+					<div class="scroller">
+						<h2>Harm: False alarms</h2>
+						<p>A false alarm happens when a person has a positive screening test but does not actually have lung cancer.</p>
+<p>Out of 1,000 people who are screened for lung cancer, 120 will have a false alarm.
+</p>
+					</div>
+				</div>
+			</div>
 
+            <div class="bb-item" id="invasiveProcedures">
+				<div class="content">
+					<div class="scroller">
+						<h2>Harm: Invasive Procedures</h2>
+						<p>Out of 1,000 people who are screened for lung cancer, 14 will have an invasive procedure such as a biopsy (a tiny piece of lung tissue is removed to test for cancer).</p>
+					</div>
+				</div>
+			</div>
+            <div class="bb-item" id="invasiveProcedures">
+				<div class="content">
+					<div class="scroller">
+						<h2>Harm: Complications</h2>
+						<p>Invasive procedures for lung cancer testing can have complications. These complications can include bleeding in the lung, a collapsed lung, or an infection.</p>
+<p>Out of 1,000 people who are screened for lung cancer, 1 will a major complication.</p>
+					</div>
+				</div>
+			</div>
+             
+            
 			<div class="bb-item" id="risksExposure">
 				<div class="content">
 					<div class="scroller">
-						<h2>Risk: Exposure to Radiation</h2>
+						<h2>Harm: Exposure to Radiation</h2>
 						<p style="font-size: 1.1em">LDCT scans expose a person to radiation, which can increase his or her risk of developing cancer. We do not know how radiation from LDCT scan may affect a person's health.</p>
 						<img src="{% static 'images/rad-chart-noBars.svg' %}" style="width:95%;margin-top: 0%;margin-left:15px" id="radExpBlank">
 						<p class="ptQuery" id="radExpQuery"  data-repImg="rad-chart-withBars.svg" data-origImg ="rad-chart-noBars.svg" data-target="radExpBlank">Radiation exposure (tap to view)</p>
@@ -118,10 +150,10 @@
 			<div class="bb-item" id="risksOverDx">
 				<div class="content">
 					<div class="scroller">
-						<h2>Risk: Overdiagnosis</h2>
+						<h2>Harm: Overdiagnosis</h2>
 						<div class="highlighted-content">
-							<p class="emphasized">Lung cancer screening may find lung cancer that would not have ever caused symptoms or harmed you in your lifetime. This is called over-diagnosis.</p>
-							<p class="emphasized">Over-diagnosis means that some people may get treatment that they do not need.</p>
+							<p class="emphasized">Lung cancer screening may find lung cancer that would not have ever caused symptoms or harmed you in your lifetime. This is called overdiagnosis.</p>
+							<p class="emphasized">Overdiagnosis means that some people may get treatment that they do not need.</p>
 						</div>
 					</div>
 				</div>
@@ -218,11 +250,13 @@
 									<td><input type="radio" name="q_talk_more_screening" value="Yes"></td>
 									<td><input type="radio" name="q_talk_more_screening" value="No"></td>
 								</tr>
+<!--
 								<tr>
 									<th class="queryDetail">having surgery if lung cancer is found?</th>
 									<td><input type="radio" name="q_talk_having_surgery" value="Yes"></td>
 									<td><input type="radio" name="q_talk_having_surgery" value="No"></td>
 								</tr>
+-->
 							</table>
 						</div>
 					</div>
@@ -232,8 +266,8 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Before you talk to your provider, please confirm the comments below:</h2>
-							<p class="confirmed"><input type="checkbox" name="q_confirm_quit_smoking" value="true">&nbsp;&nbsp;The best thing to lower your risk of dying from lung cancer is to quit smoking or continue to not smoke.</p>
-							<p class="confirmed"><input type="checkbox" name="q_confirm_annual_screening" value="true">&nbsp;&nbsp;I shouLd return once a year for annual screening.</p>
+							<p class="confirmed"><input type="checkbox" name="q_confirm_quit_smoking" value="true">&nbsp;&nbsp;The best thing to lower my risk of dying from lung cancer is to quit smoking or continue to not smoke.</p>
+							<p class="confirmed"><input type="checkbox" name="q_confirm_annual_screening" value="true">&nbsp;&nbsp;I should return once a year for annual screening.</p>
 						</div>
 					</div>
 					<button type="submit">Submit</button>
