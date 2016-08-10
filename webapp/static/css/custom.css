@@ -485,19 +485,19 @@ a:hover {
 
 .radio-big input[type="radio"] + label span {
   display: inline-block;
-  border: 4px solid #e0e0e0;
+  border: 4px solid #6a7fa2;
   width: 36px;
   height: 36px;
   margin: 12px;
   vertical-align: middle;
   cursor: pointer;
   border-radius: 50%;
-  background-color: red;
+  background-color: #a5c5e0;
 }
 
 .radio-big input[type="radio"]:checked + label span {
-  background-color: #888;
-  border-color: #555;
+  background-color: #6a7fa2;
+  border-color: #fff;
 }
 
 .radio-big input.survey-positive[type="radio"]:checked + label span {
@@ -530,6 +530,78 @@ a:hover {
   width: 85%;
 }
 
+.control-group {
+
+	background-color: rgba(255,255,255,.3);
+    border-radius: 12px;
+    font-size: 1.6em !important;
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    margin-bottom: 18px !important;
+
+
+	display: block;
+	width: 100%;
+	margin: 10px;
+	padding: 30px;
+	text-align: left;
+	vertical-align: top;
+	box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+
+.control {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 24px;
+	color: #fff;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 50px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background: #e6e6e6;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: #2aa1c0;
+}
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+.control--checkbox .control__indicator:after {
+	top: 8px;
+	left: 14px;
+	width: 12px;
+	height: 20px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 5px 5px 0;
+}
 
 
 @media screen and (max-width: 800px){
