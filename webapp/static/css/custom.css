@@ -142,7 +142,7 @@ a:hover {
 	bottom: 400px;
 	left: 23px;
 	position: absolute;
-	z-index: 1000;
+	z-index: 900;
 }
 
 .bb-custom-wrapper nav span,
@@ -187,6 +187,7 @@ a:hover {
 }
 #returnToAppBtn {
     z-index: 1000;
+	border: 1px solid yellow;
 	left: 20px;
 	top: 620px;
     background-image: url(../images/lungs.svg);
@@ -436,6 +437,35 @@ a:hover {
 
 .btn-default:active {
     background-image: none;
+}
+
+#submitDiv{
+	position: absolute;
+	bottom: 329px;
+	left: 923px;
+	z-index: 1000;
+}
+#surveySubmit {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+    bottom: 0px;
+    left: 0px;;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(100,0,0,1);
+	z-index: 1000;
+	border: none;
+	width: 72px;
+	height: 72px;
+	color: #fff;
+	line-height: 68px;
+	text-align: center;
+	speak: none;
+	font-weight: bold;
+    font-size: 2.5em;
+	cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+
+
 }
 
 @media screen and (max-width: 800px){
