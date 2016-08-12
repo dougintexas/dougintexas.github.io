@@ -11,8 +11,8 @@
 					</div>
 				</div>
 			</div>
-			<form action="/update" method="post">
-
+			<form action="" method="post">
+				{% csrf_token %}
 			<div class="bb-item" id="assessBenefits">
 				<div class="content">
 					<div class="scroller">
@@ -50,7 +50,7 @@
 							<h2>Assessing General Information: Harms</h2>
 							<p>Please tell me what you know about potential harms...</p>
 							<table class="ptResponses">
-								
+
 								<tr>
 									<th>Patient<br>Mentioned?</th>
 									<th>Was discussed?</th>
@@ -147,7 +147,7 @@
 								<tr>
 									<td class="checkbox-cell">
 										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
-											<input type="checkbox" name="d_dfocused_findcancer" value="true">
+											<input type="checkbox" name="d_focused_findcancer" value="true">
 											<div class="control__indicator" style="position:relative;"></div>
 										</label>
 
@@ -158,7 +158,7 @@
 								<tr>
 									<td class="checkbox-cell">
 										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
-											<input type="checkbox" name="d_dfocused_falsealarm" value="true">
+											<input type="checkbox" name="d_focused_falsealarm" value="true">
 											<div class="control__indicator" style="position:relative;"></div>
 										</label>
 
@@ -169,7 +169,7 @@
 								<tr>
 									<td class="checkbox-cell">
 										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
-											<input type="checkbox" name="d_dfocused_rad" value="true">
+											<input type="checkbox" name="d_focused_rad" value="true">
 											<div class="control__indicator" style="position:relative;"></div>
 										</label>
 
@@ -180,7 +180,7 @@
 								<tr>
 									<td class="checkbox-cell">
 										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
-											<input type="checkbox" name="d_dfocused_overdx" value="true">
+											<input type="checkbox" name="d_focused_overdx" value="true">
 											<div class="control__indicator" style="position:relative;"></div>
 										</label>
 
@@ -191,7 +191,7 @@
 								<tr>
 									<td class="checkbox-cell">
 										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
-											<input type="checkbox" name="d_dfocused_surg" value="true">
+											<input type="checkbox" name="d_focused_surg" value="true">
 											<div class="control__indicator" style="position:relative;"></div>
 										</label>
 
@@ -321,8 +321,8 @@
 							</tr>
 							<tr>
 								<th class="boldHead">Do you feel sure about the best choice for you?</th>
-								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="Yes"><label for="d_sure_sureaboutbestchoice-1"><span></span></label></div></td>
-								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="No"><label for="d_sure_sureaboutbestchoice-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice-1" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="Yes"><label for="d_sure_sureaboutbestchoice-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice-2" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="No"><label for="d_sure_sureaboutbestchoice-2"><span></span></label></div></td>
 								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice-3" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="Undecided"><label for="d_sure_sureaboutbestchoice-3"><span></span></label></div></td>
 							</tr>
 							<tr>
@@ -371,13 +371,14 @@
 								<td><div class="radio-big"><input type="radio" id="d_keymsg_quitsmoking-2" name="d_keymsg_quitsmoking" class="css-checkbox" value="No"><label for="d_keymsg_quitsmoking-2"><span></span></label></div></td>
 								<td><div class="radio-big"><input type="radio" id="d_keymsg_quitsmoking" name="d_keymsg_quitsmoking" class="css-checkbox" value="Undecided"><label for="d_keymsg_quitsmoking-3"><span></span></label></div></td>
 							</tr>
-							
+
 
 						</table>
+						<button type="submit">Submit</button>
+
 					</div>
 				</div>
 			</div>
-
 
 
 			</form>
