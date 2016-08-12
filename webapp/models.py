@@ -107,7 +107,7 @@ class Survey(models.Model):
         choices=CHOICES_TALK,
         verbose_name='what happens if the lung cancer screening shows something that may need more testing.'
     )
-    
+
     d_harm_falsealarm_ment = models.CharField(
         blank=True,
         null=True,
@@ -202,43 +202,43 @@ class Survey(models.Model):
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_sure_clearaboutbandh = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_sure_knowaboutbandh = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_sure_sureaboutbestchoice = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_sure_havesupport = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_sure_bescreenedtoday = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )    
+    )
 
     d_keymsg_quitsmoking = models.CharField(
         blank=True,
         null=True,
         max_length=50,
-    )        
+    )
 
 class SurveyForm(ModelForm):
     class Meta:
@@ -256,6 +256,16 @@ class SurveyForm(ModelForm):
             'q_talk_having_surg',
             'q_confirm_quit_smoking',
             'q_confirm_annual_screening',
+        ]
+        widgets = {
+            'survey_code': HiddenInput(),
+        }
+
+
+class CoachingForm(ModelForm):
+    class Meta:
+        model = Survey
+        fields = [
             'd_harm_falsealarm_ment',
             'd_harm_falsealarm_disc',
             'd_harm_rad_ment',
@@ -279,6 +289,3 @@ class SurveyForm(ModelForm):
             'd_sure_bescreenedtoday',
             'd_keymsg_quitsmoking',
         ]
-        widgets = {
-            'survey_code': HiddenInput(),
-        }
