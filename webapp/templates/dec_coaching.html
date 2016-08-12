@@ -11,12 +11,202 @@
 					</div>
 				</div>
 			</div>
-			<div class="bb-item" id="followUp">
+			<form action="/update" method="post">
+
+			<div class="bb-item" id="assessBenefits">
 				<div class="content">
 					<div class="scroller">
 						<div class="formContent">
-							<h2>Your Concerns</h2>
+							<h2>Assessing General Information: Benefits</h2>
+							<P>You viewed some information about lung cancer screening on the iPad. I am going to ask you some questions about what you just read.</P>
+
+							<p>What are some of the potential benefits of lung cancer screening?</p>
+							<div class="control-group">
+								<label class="control control--checkbox">
+									Lower chance of dying from lung cancer.
+									<input type="checkbox" name="d_benefit_lowerChanceDying_LungCancer" value="true">
+									<div class="control__indicator"></div>
+								</label>
+							</div>
+							<div class="control-group">
+								<label class="control control--checkbox">
+									Lower chance of dying from any cause.
+									<input type="checkbox" name="d_benefit_lowerChanceDying_anyCause" value="true">
+									<div class="control__indicator"></div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="bb-item" id="assessHarms1">
+				<div class="content">
+					<div class="scroller">
+						<div class="formContent">
+							<h2>Assessing General Information: Harms</h2>
+							<p>Please tell me what you know about potential harms...</p>
 							<table class="ptResponses">
+								
+								<tr>
+									<th>Patient<br>Mentioned?</th>
+									<th>Was discussed?</th>
+									<th>Harm</th>
+									<th>Intervention<br>response</th>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_falsealarm_ment" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+									</td>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_falsealarm_disc" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Having a false alarm?</th>
+									<td>{{ survey.q_concerned_false_alarm }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_rad_ment" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+									</td>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_rad_disc" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Being exposed to radiation from lung cancer?</th>
+									<td>{{ survey.q_concerned_rad }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_overdx_ment" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+									</td>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_overdx_disc" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Being treated for lung cancer that never would have harmed you?</th>
+									<td>{{ survey.q_concerned_unnecessary_treatment }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_surg_ment" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+									</td>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_harm_surg_disc" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Having surgery if lung cancer is found?</th>
+									<td>{{ survey.q_concerned_surg }}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="bb-item" id="DecFocusedQuestions">
+				<div class="content">
+					<div class="scroller">
+						<div class="formContent">
+							<h2>Decision-Focused Questions</h2>
+							<p>Let's review what you chose as being important for you when making your decision to get screening. Of the benefits and harms, which of these things are most important to you?</p>
+							<table class="ptResponses">
+								<tr>
+									<th>Most Important</th>
+									<th>Harm</th>
+									<th>Intervention<br>response</th>
+								</tr>
+
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_dfocused_findcancer" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Finding cancer when it may be more easily treated</th>
+									<td>{{ survey.q_concerned_find_cancer }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_dfocused_falsealarm" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">False alarm</th>
+									<td>{{ survey.q_concerned_false_alarm }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_dfocused_rad" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Exposure to Radiation</th>
+									<td>{{ survey.q_concerned_rad }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_dfocused_overdx" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Overdiagnosis (being treated for lung cancer that never would have harmed you)</th>
+									<td>{{ survey.q_concerned_unnecessary_treatment }}</td>
+								</tr>
+								<tr>
+									<td class="checkbox-cell">
+										<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+											<input type="checkbox" name="d_dfocused_surg" value="true">
+											<div class="control__indicator" style="position:relative;"></div>
+										</label>
+
+									</td>
+									<th class="queryDetail">Having surgery if lung cancer is found</th>
+									<td>{{ survey.q_concerned_surg }}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+<!--<table class="ptResponses">
 								<tr>
 									<th class="boldHead">How important is it to you to find lung cancer early when it may be treated more easily treated?</th>
 									<td>{{ survey.q_concerned_find_cancer }}</td>
@@ -30,7 +220,7 @@
 								</tr>
 								<tr>
 									<th class="queryDetail">being exposed to radiation from lung cancer?</th>
-									<td>{{ survey.q_concerned_radiation }}</td>
+									<td>{{ survey.q_concerned_rad }}</td>
 								</tr>
 								<tr>
 									<th class="queryDetail">being treated for lung cancer that never would have harmed you?</th>
@@ -38,41 +228,159 @@
 								</tr>
 								<tr>
 									<th class="queryDetail">having surgery if lung cancer is found?</th>
-									<td>{{ survey.q_concerned_surgery }}</td>
+									<td>{{ survey.q_concerned_surg }}</td>
 								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
+							</table>-->
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class="bb-item" id="talkAbout">
 				<div class="content">
 					<div class="scroller">
 						<h2>Talking About Lung Cancer Screening</h2>
 						<table class="ptResponses">
 							<tr>
-								<th class="boldHead" style="padding-top: 1em;" colspan="2">Things you might want to talk about...</th>
+								<th>Was discussed</th>
+								<th class="boldHead" style="padding-top: 1em;" colspan="">Things you might want to talk about...</th>
+								<th>Intervention response</th>
 							</tr>
 							<tr>
-								<th class="queryDetail">what happens if I decide NOT to be screened for lung cancer.</th>
+								<td class="checkbox-cell">
+									<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+										<input type="checkbox" name="d_talkabout_notscreening" value="true">
+										<div class="control__indicator" style="position:relative;"></div>
+									</label>
+								</td>
+								<th class="queryDetail">What happens if I decide NOT to be screened for lung cancer.</th>
 								<td>{{ survey.q_talk_not_screened }}</td>
 							</tr>
 							<tr>
-								<th class="queryDetail">how soon I will know the results of screening.</th>
+								<td class="checkbox-cell">
+									<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+										<input type="checkbox" name="d_talkabout_knowresults" value="true">
+										<div class="control__indicator" style="position:relative;"></div>
+									</label>
+								</td>
+								<th class="queryDetail">How soon I will know the results of screening.</th>
 								<td>{{ survey.q_talk_how_soon }}</td>
 							</tr>
 							<tr>
-								<th class="queryDetail">what happens if the lung cancer screening shows something that may need more testing.</th>
+								<td class="checkbox-cell">
+									<label class="control control--checkbox" style="padding:0px ;margin: 0px;">
+										<input type="checkbox" name="d_talkabout_moretesting" value="true">
+										<div class="control__indicator" style="position:relative;"></div>
+									</label>
+								</td>
+								<th class="queryDetail">What happens if the lung cancer screening shows something that may need more testing.</th>
 								<td>{{ survey.q_talk_more_screening }}</td>
 							</tr>
-							<tr>
+							<!--<tr>
 								<th class="queryDetail">having surgery if lung cancer is found?</th>
-								<td>{{ survey.q_talk_having_surgery }}</td>
-							</tr>
+								<td>{{ survey.q_talk_having_surg }}</td>
+							</tr>-->
 						</table>
 					</div>
 				</div>
 			</div>
+
+			<div class="bb-item" id="SUREQuestions">
+				<div class="content">
+					<div class="scroller">
+						<h2>SURE Questions</h2>
+						<p>Let's shift gears and talk about how you made your decision to have a lung cancer screening done today.'
+						<table class="ptResponses">
+							<tr class="tableHead">
+								<th></th>
+								<th class="colHead">Yes</th>
+								<th class="colHead">No</th>
+								<th class="colHead">Undecided</th>
+							</tr>
+							<tr>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<th class="boldHead">Are you clear about which benefits and harms matter most to you?</th>
+								<td><div class="radio-big"><input type="radio" id="d_sure_clearaboutbandh-1" name="d_sure_clearaboutbandh" class="css-checkbox" value="Yes"><label for="d_sure_clearaboutbandh-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_clearaboutbandh-2" name="d_sure_clearaboutbandh" class="css-checkbox" value="No"><label for="d_sure_clearaboutbandh-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_clearaboutbandh-3" name="d_sure_clearaboutbandh" class="css-checkbox" value="Undecided"><label for="d_sure_clearaboutbandh-3"><span></span></label></div></td>
+							</tr>
+							<tr>
+								<th class="boldHead">Do you know the benefits and harms of each option?</th>
+								<td><div class="radio-big"><input type="radio" id="d_sure_knowaboutbandh-1" name="d_sure_knowaboutbandh" class="css-checkbox" value="Yes"><label for="d_sure_knowaboutbandh-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_knowaboutbandh-2" name="d_sure_knowaboutbandh" class="css-checkbox" value="No"><label for="d_sure_knowaboutbandh-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_knowaboutbandh-3" name="d_sure_knowaboutbandh" class="css-checkbox" value="Undecided"><label for="d_sure_knowaboutbandh-3"><span></span></label></div></td>
+							</tr>
+							<tr>
+								<th class="boldHead">Do you feel sure about the best choice for you?</th>
+								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="Yes"><label for="d_sure_sureaboutbestchoice-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="No"><label for="d_sure_sureaboutbestchoice-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_sureaboutbestchoice-3" name="d_sure_sureaboutbestchoice" class="css-checkbox" value="Undecided"><label for="d_sure_sureaboutbestchoice-3"><span></span></label></div></td>
+							</tr>
+							<tr>
+								<th class="boldHead">Do you have enough support and advice to make the decision to have a lung cancer screening today?</th>
+								<td><div class="radio-big"><input type="radio" id="d_sure_havesupport-1" name="d_sure_havesupport" class="css-checkbox" value="Yes"><label for="d_sure_havesupport-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_havesupport-2" name="d_sure_havesupport" class="css-checkbox" value="No"><label for="d_sure_havesupport-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_havesupport-3" name="d_sure_havesupport" class="css-checkbox" value="Undecided"><label for="d_sure_havesupport-3"><span></span></label></div></td>
+							</tr>
+							<tr>
+								<th class="boldHead">Do you want to be screened for lung cancer today?</th>
+								<td><div class="radio-big"><input type="radio" id="d_sure_bescreenedtoday-1" name="d_sure_bescreenedtoday" class="css-checkbox" value="Yes"><label for="d_sure_bescreenedtoday-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_sure_bescreenedtoday-2" name="d_sure_bescreenedtoday" class="css-checkbox" value="No"><label for="d_sure_bescreenedtoday-2"><span></span></label></div></td>
+								<td>&nbsp;</td>
+							</tr>
+
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+			<div class="bb-item" id="KeyMessages">
+				<div class="content">
+					<div class="scroller">
+						<h2>Reiterated Key Messages</h2>
+						<p>Before we wrap up, let's address a few key points:</p>
+						<p>The best thing to do to lower rour risk of dying from lung cancer is to quit smoking or continue to not smoke</p>
+						<p>You should return once a year for annual screening</p>
+						<table class="ptResponses">
+							<tr class="tableHead">
+								<th></th>
+								<th class="colHead">Yes</th>
+								<th class="colHead">No</th>
+								<th class="colHead">Undecided</th>
+							</tr>
+							<tr>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<th class="boldHead">A</th>
+								<td><div class="radio-big"><input type="radio" id="d_keymsg_quitsmoking-1" name="d_keymsg_quitsmoking" class="css-checkbox" value="Yes"><label for="d_keymsg_quitsmoking-1"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_keymsg_quitsmoking-2" name="d_keymsg_quitsmoking" class="css-checkbox" value="No"><label for="d_keymsg_quitsmoking-2"><span></span></label></div></td>
+								<td><div class="radio-big"><input type="radio" id="d_keymsg_quitsmoking" name="d_keymsg_quitsmoking" class="css-checkbox" value="Undecided"><label for="d_keymsg_quitsmoking-3"><span></span></label></div></td>
+							</tr>
+							
+
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+
+			</form>
 			<nav>
 				<span id="bb-nav-prev">&larr;</span>
 				<span id="bb-nav-next">&rarr;</span>
