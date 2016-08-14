@@ -23,11 +23,24 @@
 }
 
 table.ptResponses {
-    background-color: #005184;
     margin-top: 36px;
-    border-radius: 12px;
+    border-radius: 12;
     padding:24px;
-    background-color: #7ca7cc;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05) !important;
+}
+
+.ptResponses thead th:first-child {
+    border-radius: 10px 0 0 0 !important;
+}
+.ptResponses thead th:last-child {
+    border-radius: 0 10px 0 0 !important;
+}
+
+.ptResponses tbody tr:last-child th:first-child {
+    border-radius: 0 0 0px 10px !important;
+}
+.ptResponses tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0 !important;
 }
 
 table.ptResponses th {
@@ -40,6 +53,7 @@ table.ptResponses th {
 }
 table.ptResponses th.boldHead {
     font-weight: bold;
+    background-color: #3f557a !important;
 }
 table.ptResponses th.colHead {
     color: rgba(255,255,255,.8);
@@ -55,6 +69,7 @@ th.queryDetail {
 }
 table.ptResponses td {
     text-align: center;
+    background-color: #7ca7cc;
 }
 
 th.colHead {
@@ -85,8 +100,17 @@ p.confirmed {
     text-indent: -24px;
 }
 table, th, td {
-    border:1px solid white;
+    /*border:1px solid white;*/
     border-collapse: collapse;
+}
+th.lighter {
+    background-color: #8196b9 !important;
+}
+table.ptResponses td.lighter {
+    background-color: #92bce0
+}
+tr.tableHead th {
+    background-color: #3f557a;
 }
 table.ptResponses tr.tableHead th {
    

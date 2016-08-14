@@ -111,8 +111,9 @@
 					<div class="scroller">
 						<h2>Harm: False alarms</h2>
 						<p>A false alarm happens when a person has a positive screening test but does not actually have lung cancer.</p>
-<p>Out of 1,000 people who are screened for lung cancer, 120 will have a false alarm.
-</p>
+						<!--<p>Out of 1,000 people who are screened for lung cancer, 120 will have a false alarm.</p>-->
+						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="falseAlarmsGrid">
+						<p class="ptQuery" id="falseAlarmsGrid" data-repImg="120ppl.svg" data-origImg ="1000ppl-01.svg" data-target="falseAlarmsGrid">How many of the 1000 people who are screened will have a false alarm? (tap to view)</p>
 					</div>
 				</div>
 			</div>
@@ -121,7 +122,9 @@
 				<div class="content">
 					<div class="scroller">
 						<h2>Harm: Invasive Procedures</h2>
-						<p>Out of 1,000 people who are screened for lung cancer, 14 will have an invasive procedure such as a biopsy (a tiny piece of lung tissue is removed to test for cancer).</p>
+						<p>An example of an invasive procedure is a biopsy (a tiny piece of lung tissue is removed to test for cancer).</p>
+						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="invasiveProcsGrid">
+						<p class="ptQuery" id="invasiveProcsGrid" data-repImg="14ppl.svg" data-origImg ="1000ppl-01.svg" data-target="invasiveProcsGrid">How many of the 1000 people who are screened will have an invasive procedure? (tap to view)</p>
 					</div>
 				</div>
 			</div>
@@ -130,7 +133,9 @@
 					<div class="scroller">
 						<h2>Harm: Complications</h2>
 						<p>Invasive procedures for lung cancer testing can have complications. These complications can include bleeding in the lung, a collapsed lung, or an infection.</p>
-<p>Out of 1,000 people who are screened for lung cancer, 1 will a major complication.</p>
+						<p>How many of the 1000 people who are screened will have a major complication? (tap to view</p>
+						<img style="clear:left;" src="{% static 'images/1000ppl-01.svg' %}" width="730" id="majComplicationGrid">
+						<p class="ptQuery" id="majComplicationGrid" data-repImg="1ppl.svg" data-origImg ="1000ppl-01.svg" data-target="majComplicationGrid">How many of the 1000 people who are screened will have an invasive procedure? (tap to view)</p>
 					</div>
 				</div>
 			</div>
@@ -180,17 +185,17 @@
 							<div class="formContent">
 								<h2>Your Concerns</h2>
 								<table class="ptResponses">
+									<thead>
 									<tr class="tableHead">
 										<th></th>
 										<th class="colHead">Very Concerned</th>
 										<th class="colHead">Somewhat Concerned</th>
 										<th class="colHead">Not Concerned</th>
 									</tr>
+									</thead>
+									<tbody>
 									<tr>
-										<th colspan="4"></th>
-									</tr>
-									<tr>
-										<th class="boldHead">How important is it to you to find lung cancer early when it may be treated more easily treated?</th>
+										<th class="">How important is it to you to find lung cancer early when it may be treated more easily treated?</th>
 										<td><div class="radio-big"><input type="radio" id="q_concerned_find_cancer-1" name="q_concerned_find_cancer" class="css-checkbox" value="Very Concerned"><label for="q_concerned_find_cancer-1"><span></span></label></div></td>
 										<td><div class="radio-big"><input type="radio" id="q_concerned_find_cancer-2" name="q_concerned_find_cancer" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_find_cancer-2"><span></span></label></div></td>
 										<td><div class="radio-big"><input type="radio" id="q_concerned_find_cancer-3" name="q_concerned_find_cancer" class="css-checkbox" value="Not Concerned"><label for="q_concerned_find_cancer-3"><span></span></label></div></td>
@@ -199,10 +204,10 @@
 										<th colspan="4" class="boldHead" style="padding-top: 1em;">How concerned are you about...</th>
 									</tr>
 									<tr>
-										<th class="queryDetail">having a false alarm?</th>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-1" name="q_concerned_false_alarm" class="css-checkbox" value="Very Concerned"><label for="q_concerned_false_alarm-1"><span></span></label></div></td>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-2" name="q_concerned_false_alarm" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_false_alarm-2"><span></span></label></div></td>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-3" name="q_concerned_false_alarm" class="css-checkbox" value="Not Concerned"><label for="q_concerned_false_alarm-3"><span></span></label></div></td>
+										<th class="queryDetail lighter">having a false alarm?</th>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-1" name="q_concerned_false_alarm" class="css-checkbox" value="Very Concerned"><label for="q_concerned_false_alarm-1"><span></span></label></div></td>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-2" name="q_concerned_false_alarm" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_false_alarm-2"><span></span></label></div></td>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_false_alarm-3" name="q_concerned_false_alarm" class="css-checkbox" value="Not Concerned"><label for="q_concerned_false_alarm-3"><span></span></label></div></td>
 									</tr>
 									<tr>
 										<th class="queryDetail">being exposed to radiation from lung cancer?</th>
@@ -211,10 +216,10 @@
 										<td><div class="radio-big"><input type="radio" id="q_concerned_rad-3" name="q_concerned_rad" class="css-checkbox" value="Not Concerned"><label for="q_concerned_rad-3"><span></span></label></div></td>
 									</tr>
 									<tr>
-										<th class="queryDetail">being treated for lung cancer that never would have harmed you?</th>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-1" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Very Concerned"><label for="q_concerned_unnecessary_treatment-1"><span></span></label></div></td>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-2" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_unnecessary_treatment-2"><span></span></label></div></td>
-										<td><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-3" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Not Concerned"><label for="q_concerned_unnecessary_treatment-3"><span></span></label></div></td>
+										<th class="queryDetail lighter">being treated for lung cancer that never would have harmed you?</th>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-1" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Very Concerned"><label for="q_concerned_unnecessary_treatment-1"><span></span></label></div></td>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-2" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_unnecessary_treatment-2"><span></span></label></div></td>
+										<td class="lighter"><div class="radio-big"><input type="radio" id="q_concerned_unnecessary_treatment-3" name="q_concerned_unnecessary_treatment" class="css-checkbox" value="Not Concerned"><label for="q_concerned_unnecessary_treatment-3"><span></span></label></div></td>
 									</tr>
 									<tr>
 										<th class="queryDetail">having surgery if lung cancer is found?</th>
@@ -222,6 +227,7 @@
 										<td><div class="radio-big"><input type="radio" id="q_concerned_surg-2" name="q_concerned_surg" class="css-checkbox" value="Somewhat Concerned"><label for="q_concerned_surg-2"><span></span></label></div></td>
 										<td><div class="radio-big"><input type="radio" id="q_concerned_surg-3" name="q_concerned_surg" class="css-checkbox" value="Not Concerned"><label for="q_concerned_surg-3"><span></span></label></div></td>
 									</tr>
+									</tbody>
 								</table>
 							</div>
 						</div>
@@ -232,26 +238,30 @@
 						<div class="scroller">
 							<h2>Talking About Lung Cancer Screening</h2>
 							<table class="ptResponses">
-								<tr>
+								<thead>
+								<tr class="tableHead">
 									<th class="boldHead" style="padding-top: 1em;">Things you might want to talk about...</th>
 									<th class="colHead">Yes, I want to talk about this</th>
 									<th class="colHead">No, I don't want to talk about this</th>
 								</tr>
+								</thead>
+								<tbody>
 								<tr>
 									<th class="queryDetail">what happens if I decide NOT to be screened for lung cancer.</th>
 									<td><div class="radio-big"><input type="radio" id="q_talk_not_screened-1" name="q_talk_not_screened" class="css-checkbox" value="Yes"><label for="q_talk_not_screened-1"><span></span></label></div></td>
 									<td><div class="radio-big"><input type="radio" id="q_talk_not_screened-2" name="q_talk_not_screened" class="css-checkbox" value="No"><label for="q_talk_not_screened-2"><span></span></label></div></td>
 								</tr>
 								<tr>
-									<th class="queryDetail">how soon I will know the results of screening.</th>
-									<td><div class="radio-big"><input type="radio" id="q_talk_how_soon-1" name="q_talk_how_soon" class="css-checkbox" value="Yes"><label for="q_talk_how_soon-1"><span></span></label></div></td>
-									<td><div class="radio-big"><input type="radio" id="q_talk_how_soon-2" name="q_talk_how_soon" class="css-checkbox" value="No"><label for="q_talk_how_soon-2"><span></span></label></div></td>
+									<th class="queryDetail lighter">how soon I will know the results of screening.</th>
+									<td class="lighter"><div class="radio-big"><input type="radio" id="q_talk_how_soon-1" name="q_talk_how_soon" class="css-checkbox" value="Yes"><label for="q_talk_how_soon-1"><span></span></label></div></td>
+									<td class="lighter"><div class="radio-big"><input type="radio" id="q_talk_how_soon-2" name="q_talk_how_soon" class="css-checkbox" value="No"><label for="q_talk_how_soon-2"><span></span></label></div></td>
 								</tr>
 								<tr>
 									<th class="queryDetail">what happens if the lung cancer screening shows something that may need more testing.</th>
 									<td><div class="radio-big"><input type="radio" id="q_talk_more_screening-1" name="q_talk_more_screening" class="css-checkbox" value="Yes"><label for="q_talk_more_screening-1"><span></span></label></div></td>
 									<td><div class="radio-big"><input type="radio" id="q_talk_more_screening-2" name="q_talk_more_screening" class="css-checkbox" value="No"><label for="q_talk_more_screening-2"><span></span></label></div></td>
 								</tr>
+								</tbody>
 <!--
 								<tr>
 									<th class="queryDetail">having surgery if lung cancer is found?</th>
