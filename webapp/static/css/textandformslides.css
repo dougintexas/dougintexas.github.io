@@ -10,9 +10,9 @@
     border:3px solid #fff;
     padding: 12px 24px;
     background-color: #7ca7cc;
-    margin-top: 36px;
+    margin-top: 12px;
     border-radius: 12px;
-    padding-top: 24px !important;
+    padding: 12px 12px 0px 12px;
 }
 
 .highlighted-content p {
@@ -85,17 +85,26 @@ thead tr th{
 th.centered {
     text-align: center !important;
 }
-
+.content p {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 300;
+	text-align: center;
+    color: #fff
+}
 .emphasized {
     background-color: rgba(255,255,255,.3);
     border-radius: 12px;
     padding:24px;
-    font-size: 1.6em !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
     font-weight: bold !important;
     margin-top: 0px !important;
-    margin-bottom: 18px !important;
+    margin-bottom: 12px;
     
 }
+
+
 p.confirmed {
     text-align: left !important;
     background-color: rgba(255,255,255,.3) !important;
@@ -108,6 +117,12 @@ p.confirmed {
     margin-bottom: 18px !important;
     text-indent: -24px;
 }
+p.questionForPt {
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 table, th, td {
     /*border:1px solid white;*/
     border-collapse: collapse;
